@@ -1,0 +1,14 @@
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\02_Claims_UnitTest.csprojAssemblyReference.cache
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\02_Claims_UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\KClaims_UnitTest.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\KClaims_UnitTest.pdb
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\02_Claims_UnitTest.csproj.CopyComplete
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\KClaims_UnitTest.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\KClaims_UnitTest.pdb

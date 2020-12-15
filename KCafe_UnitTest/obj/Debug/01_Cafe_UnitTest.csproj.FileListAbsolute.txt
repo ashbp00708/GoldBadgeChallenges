@@ -1,0 +1,2 @@
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KCafe_UnitTest\obj\Debug\01_Cafe_UnitTest.csprojAssemblyReference.cache
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KCafe_UnitTest\obj\Debug\01_Cafe_UnitTest.csproj.CoreCompileInputs.cache
