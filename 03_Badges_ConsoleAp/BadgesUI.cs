@@ -8,5 +8,6 @@ namespace _03_Badges_ConsoleAp
 {
     class BadgesUI
     {
+        private BadgesRepo _badgesRepo = new BadgesRepo();
     }
 }

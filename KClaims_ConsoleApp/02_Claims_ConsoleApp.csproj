@@ -50,5 +50,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KClaims_ClassLibrary\02_Claims_ClassLibrary.csproj">
+      <Project>{661aad00-82fd-4c93-b618-2d9611ecdbaf}</Project>
+      <Name>02_Claims_ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KClaims_UnitTest\02_Claims_UnitTest.csproj">
+      <Project>{2a5aaea7-cce7-4313-b56a-d289063d8bc7}</Project>
+      <Name>02_Claims_UnitTest</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

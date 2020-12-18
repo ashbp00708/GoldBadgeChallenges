@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace KCafe_ClassLibrary
 {
-   
     public class CafeMenu
     {
         public string MealName { get; set; }
@@ -14,8 +13,6 @@ namespace KCafe_ClassLibrary
         public int MealNumber { get; set; }
         public string Ingredient { get; set; }
         public double Price { get; set; }
-
-
         public CafeMenu() { }
         public CafeMenu(string mealName, string description, int mealNumber, string ingredient, double price)
         {
@@ -26,7 +23,6 @@ namespace KCafe_ClassLibrary
             Price = price;
         }
     }
-
 }
 
     

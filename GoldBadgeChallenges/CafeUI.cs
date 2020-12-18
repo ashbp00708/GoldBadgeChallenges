@@ -11,13 +11,10 @@ namespace GoldBadgeChallenges
     {
         private CafeRepo _cafeRepo = new CafeRepo();
         private CafeMenu _cafeMenu = new CafeMenu();
-        private List<CafeMenu> _listOfMenuItems = new List<CafeMenu>();
-        private List<string> _listOfIngredients = new List<string>();
         public void Run()
         {
             SeedMenuMeals();
             CafeMenu();
-
         }
         private void CafeMenu()
         {
@@ -28,8 +25,9 @@ namespace GoldBadgeChallenges
                     "1. Add New Meal to Cafe Menu\n" +
                     "2. View Current Meals on Cafe Menu\n" +
                     "3. Change Existing Meal on Cafe Menu\n" +
-                    "4. Delete Meal from Cafe Menu\n" +
-                    "5. Exit Cafe Menu Client");
+                    "4. Search For Meal By Number\n" +
+                    "5. Delete Meal from Cafe Menu\n" +
+                    "6. Exit Cafe Menu Client");
 
                 string userSelection = Console.ReadLine();
 
@@ -45,9 +43,12 @@ namespace GoldBadgeChallenges
                         UpdateCafeMenuMeal();
                         break;
                     case "4":
-                        RemoveMealFromMenu();
+                        SearchByMealNumber();
                         break;
                     case "5":
+                        RemoveMealFromMenu();
+                        break;
+                    case "6":
                         Console.WriteLine("Exiting Client...");
                         stillUsingMenu = false;
                         break;
@@ -79,9 +80,6 @@ namespace GoldBadgeChallenges
             newMenuItem.Price = double.Parse(PriceString);
             _cafeRepo.AddToCafeMenu(newMenuItem);
         }
-        
-         
-        
         private void ShowFullCafeMenu()
         {
             Console.Clear();
@@ -93,7 +91,6 @@ namespace GoldBadgeChallenges
                     $"MealNumber: {menuItem.MealNumber}\n" +
                     $"Price: {menuItem.Price}");
             }
-
         }
         private void UpdateCafeMenuMeal()
         {
@@ -141,8 +138,28 @@ namespace GoldBadgeChallenges
                 Console.WriteLine("Opps! The system could not sucessfully remove the meal from the Cafe Menu.");
             }
         }
-      
-       
+
+        public void SearchByMealNumber()
+        {
+            Console.Clear();
+            Console.WriteLine("Search for the number of the meal you would like to view: ");
+            string mealNumberAsString = Console.ReadLine();
+            int mealNumber = int.Parse(mealNumberAsString);
+            CafeMenu menuItem = _cafeRepo.SearchMealNumber(mealNumber);
+            if(menuItem != null)
+            {
+                Console.WriteLine($"Name: {menuItem.MealName}\n" +
+                    $"Meal: # {menuItem.MealNumber}\n" +
+                    $"Description: {menuItem.Description}\n" +
+                    $"Ingredients: {menuItem.Ingredient}\n" +
+                    $"Price: '$' {menuItem.Price}\n");
+            }
+            else
+            {
+                Console.WriteLine("No results for entered value..");
+            }
+           
+        }
         private void SeedMenuMeals()
         {
             CafeMenu BLT = new CafeMenu("BLT", "BLT sandwich on wheat bread, served with house chips and a medium beverage.", 1, "bacon, tomato, lettuce, mayo, wheat bread, homemade potato chips", 7.99);

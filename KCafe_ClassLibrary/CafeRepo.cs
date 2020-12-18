@@ -8,25 +8,19 @@ namespace KCafe_ClassLibrary
 {
     public class CafeRepo
     {
-        private CafeMenu _cafeMenu = new CafeMenu();
-        private List<CafeMenu> _listOfMenuItems = new List<CafeMenu>();
-        
+        private List<CafeMenu> _listOfMenuItems = new List<CafeMenu>();      
         public void AddToCafeMenu(CafeMenu menuItem)
         {
             _listOfMenuItems.Add(menuItem);
-
         }
-        
- 
         public List<CafeMenu> ShowFullCafeMenu()
         {
             return _listOfMenuItems;
         }
-        
-        public bool UpdateCafeMenuMeal(string ogMealName, CafeMenu newMenuItem)
+        public bool UpdateCafeMenuMeal(string oldMealName, CafeMenu newMenuItem)
         {
            
-            CafeMenu oldMenuItem = SearchMealByName(ogMealName);
+            CafeMenu oldMenuItem = SearchMealByName(oldMealName);
             if(oldMenuItem !=null)
             {
                 oldMenuItem.MealName = newMenuItem.MealName;
@@ -41,7 +35,7 @@ namespace KCafe_ClassLibrary
                 return false;
             }
         }
-        public bool RemoveMealFromMenu(string mealName)
+         public bool RemoveMealFromMenu(string mealName)
         {
             CafeMenu menuItem = SearchMealByName(mealName);
             if(menuItem ==null)
@@ -52,14 +46,12 @@ namespace KCafe_ClassLibrary
             if(initialCount > _listOfMenuItems.Count)
             {
                 return true;
-
             }
             else
             {
                 return false;
             }
         }
-
         public CafeMenu SearchMealByName(string mealName)
         {
             foreach (CafeMenu menuItem in _listOfMenuItems)
@@ -71,7 +63,7 @@ namespace KCafe_ClassLibrary
             }
             return null;
         }
-        public CafeMenu SearchMealByMealNumber(int mealNumber)
+        public CafeMenu SearchMealNumber(int mealNumber)
         {
             foreach (CafeMenu menuItem in _listOfMenuItems)
             {
@@ -81,10 +73,7 @@ namespace KCafe_ClassLibrary
                 }
             }
             return null;
-
-        }
-       
-        
         }
     }
+}
 

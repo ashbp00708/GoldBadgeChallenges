@@ -1,44 +1,50 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace KClaims_ClassLibrary
 {
-    class ClaimsRepo
+    public class ClaimsRepo
     {
-       
-        private Queue<Claims> _claimsElements = new Queue<Claims>();
+        private List<Claims> _claimsList = new List<Claims>();
+        private readonly Queue<Claims> _claimsQueue = new Queue<Claims>();
         public void EnterNewClaim(Claims element)
         {
-            _claimsElements.Enqueue(element);
+            _claimsQueue.Enqueue(element);
         }
-        public Queue<Claims> ViewAllClaims()
+        public List<Claims> ShowAllClaims()
         {
-            return _claimsElements;
+            return _claimsList;
         }
-        public void HandleNextClaim() 
+        public void ViewNextInQueue()
         {
-            Claims nextClaim = _claimsElements.Peek();
-            if(nextClaim.IsValid ==true)
-                {
-                _claimsElements.Dequeue();
+            Queue<Claims> _claimsQueue = new Queue<Claims>();
 
-            }
-            if(nextClaim.IsValid ==false)
+           _claimsQueue.Peek();
+        }
+        public List<Claims> QueueToListClaims()
+        {
+            List<Claims> _claimsList = _claimsQueue.ToList();
+            foreach (Claims element in _claimsList)
             {
-
+                element.ClaimId.ToString();
+                element.TypeOfClaim.ToString();
+                element.Description.ToString();
+                element.ClaimAmount.ToString();
+                element.DateOfIncidentS.ToString();
+                element.DateOfClaimS.ToString();
+                element.IsValid.ToString();
+                return _claimsList;
             }
-            else
-            {
-                Console.WriteLine("Please Enter y/n.");
-            }
-            
+            return null;
         }
         public Claims GetClaimByID(int claimId)
         {
-            foreach(Claims element in _claimsElements)
+            foreach(Claims element in _claimsQueue)
             {
                 if(element.ClaimId == claimId)
                 {
@@ -47,6 +53,6 @@ namespace KClaims_ClassLibrary
             }
             return null;
         }
-
+        
     }
 }

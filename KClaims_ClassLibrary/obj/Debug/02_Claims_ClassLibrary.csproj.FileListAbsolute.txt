@@ -1,0 +1,9 @@
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\bin\Debug\KClaims_ClassLibrary.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\bin\Debug\KClaims_ClassLibrary.pdb
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\obj\Debug\02_Claims_ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\obj\Debug\02_Claims_ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\obj\Debug\02_Claims_ClassLibrary.csproj.CopyComplete
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\obj\Debug\KClaims_ClassLibrary.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_ClassLibrary\obj\Debug\KClaims_ClassLibrary.pdb
