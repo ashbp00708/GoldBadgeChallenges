@@ -126,10 +126,11 @@ namespace GoldBadgeChallenges
             ShowFullCafeMenu();
             Console.WriteLine("\n"+
                 "Search the name of the meal you would like to remove from the Cafe Menu: ");
-            string userInput = Console.ReadLine();
+            int inputAsString = Convert.ToInt32(Console.ReadLine());
+            
 
-            bool deletedSuccessfully = _cafeRepo.RemoveMealFromMenu(userInput);
-            if(deletedSuccessfully)
+            bool removed = _cafeRepo.RemoveMealFromMenu(inputAsString);
+            if(removed)
             {
                 Console.WriteLine("The meal was successfully removed from the Cafe Menu.");
             }

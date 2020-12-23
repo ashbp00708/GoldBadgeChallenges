@@ -10,41 +10,39 @@ namespace KClaims_ClassLibrary
 {
     public class ClaimsRepo
     {
-        private List<Claims> _claimsList = new List<Claims>();
-        private readonly Queue<Claims> _claimsQueue = new Queue<Claims>();
+        private Queue<Claims> _claimsQueue = new Queue<Claims>();
+
         public void EnterNewClaim(Claims element)
         {
             _claimsQueue.Enqueue(element);
         }
-        public List<Claims> ShowAllClaims()
+        public void ShowAllClaims()
         {
-            return _claimsList;
+            foreach(Claims element in _claimsQueue)
+            {
+                Console.WriteLine(element);   
+            }
         }
         public void ViewNextInQueue()
         {
-            Queue<Claims> _claimsQueue = new Queue<Claims>();
-
            _claimsQueue.Peek();
         }
-        public List<Claims> QueueToListClaims()
+        public bool TakeCareOfNextClaim()
         {
-            List<Claims> _claimsList = _claimsQueue.ToList();
-            foreach (Claims element in _claimsList)
+            Claims nextClaim = _claimsQueue.Peek();
+            if (nextClaim != null)
             {
-                element.ClaimId.ToString();
-                element.TypeOfClaim.ToString();
-                element.Description.ToString();
-                element.ClaimAmount.ToString();
-                element.DateOfIncidentS.ToString();
-                element.DateOfClaimS.ToString();
-                element.IsValid.ToString();
-                return _claimsList;
+                _claimsQueue.Dequeue();
+                return true;
             }
-            return null;
+            else
+            {
+                return false;
+            }
         }
         public Claims GetClaimByID(int claimId)
         {
-            foreach(Claims element in _claimsQueue)
+        foreach (Claims element in _claimsQueue)
             {
                 if(element.ClaimId == claimId)
                 {

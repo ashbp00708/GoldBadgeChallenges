@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _03_Badges_ConsoleApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace _03_Badges_ConsoleAp
     {
         static void Main(string[] args)
         {
+            BadgesUI program = new BadgesUI();
+            program.Run();
         }
     }
 }

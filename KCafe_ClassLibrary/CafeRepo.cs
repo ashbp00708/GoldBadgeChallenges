@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace KCafe_ClassLibrary
-{
+{    
     public class CafeRepo
-    {
-        private List<CafeMenu> _listOfMenuItems = new List<CafeMenu>();      
+    { 
+        public List<CafeMenu> _listOfMenuItems = new List<CafeMenu>();      
         public void AddToCafeMenu(CafeMenu menuItem)
         {
             _listOfMenuItems.Add(menuItem);
@@ -35,18 +35,20 @@ namespace KCafe_ClassLibrary
                 return false;
             }
         }
-         public bool RemoveMealFromMenu(string mealName)
+         public bool RemoveMealFromMenu(int mealNumber)
         {
-            CafeMenu menuItem = SearchMealByName(mealName);
+            CafeMenu menuItem = SearchMealNumber(mealNumber);
             if(menuItem ==null)
             {
                 return false;
             }
             int initialCount = _listOfMenuItems.Count;
+            _listOfMenuItems.Remove(menuItem);  
+
             if(initialCount > _listOfMenuItems.Count)
             {
                 return true;
-            }
+            } 
             else
             {
                 return false;

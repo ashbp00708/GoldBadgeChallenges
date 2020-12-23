@@ -9,41 +9,59 @@ namespace _03_Badges_ClassLibrary
     public class BadgesRepo
     {
         public Dictionary<int, Badges> _badgeLog = new Dictionary<int, Badges>();
-        public void CreateNewBadge(int badgeID, Badges badge)
+        public void CreateNewBadge(int badgeid, Badges badge)
         {
-            _badgeLog.Add(badgeID, badge);
+            _badgeLog.Add(badgeid, badge);
         }
-        public Dictionary<int, Badges> ListBadges()
+        public Dictionary<int, Badges> ListAllBadges()
         {
             return _badgeLog;
         }
-        public bool UpdateDoorsOnBadge(int badgeID, Badges newBadgeAccess)
+        public bool UpdateBadgeAccess(int badgeID, Badges newDoorAccess)
         {
-            Badges oldBadgeAccess = SearchBadgeID(int BadgeID)
-         if (oldBadgeID != null)
-          { 
-            oldBadgeAccess.BadgeID = newBadgeAccess.BadgeID;
-            oldBadgeAccess.DoorNames = newBadgeAccess.DoorNames;
-            return true;
-          }
-         else
-          {
+            Badges oldAccess = SearchBadgeID(badgeID);
+            if(oldAccess != null)
+            {
+                oldAccess.BadgeID = newDoorAccess.BadgeID;
+                oldAccess.DoorNames = newDoorAccess.DoorNames;
+                return true;
+            }
+            else
+            {
                 return false;
             }
         }
-        public void SearchBadgeID(int badgeID, Badges badges)
+        public bool DeleteDoorFromBadge(int badgeID)
         {
-            if (badges.BadgeID == badgeID)
+            Badges badge = SearchBadgeID(badgeID);
+            if(badge == null)
             {
-                return badges;
+                return false;
+            }
+            int initialCount = _badgeLog.Count();
+            if(initialCount > _badgeLog.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }   
+        public Badges SearchBadgeID(int iD)
+        { 
+           if(_badgeLog.TryGetValue(iD, out Badges badgeResult))
+            {
+                return badgeResult;
             }
             else
             {
                 return null;
             }
+            }
         }
-    }
-}
+ }
+
 
 
 

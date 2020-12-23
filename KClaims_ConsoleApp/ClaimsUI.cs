@@ -10,7 +10,6 @@ namespace KClaims_ConsoleApp
     class ClaimsUI
     {
         private ClaimsRepo _claimsRepo = new ClaimsRepo();
-        private Queue<Claims> _claimsQueue = new Queue<Claims>();
         public void Run()
         {
             SeedClaims();
@@ -96,8 +95,8 @@ namespace KClaims_ConsoleApp
         private void DisplayClaimsQueue()
         {
             Console.Clear();
-            List<Claims> _claimsList = _claimsRepo.ShowAllClaims();
-            foreach (Claims claimElements in _claimsList)
+
+            foreach (Claims claimElements in _claimsRepo)
             {
                 Console.WriteLine($"Claim ID #: {claimElements.ClaimAmount}\n" +
                     $"Type of Claim: {claimElements.TypeOfClaim}\n" +
@@ -114,11 +113,14 @@ namespace KClaims_ConsoleApp
 
             Console.WriteLine("Do you want to handle the next claim? y/n: ");
 
-            string handleClaim = Console.ReadLine();
+            string handleClaim = Console.ReadLine().ToLower();
 
             if (handleClaim == "y")
             {
-                _claimsQueue.Dequeue();
+                _claimsRepo.TakeCareOfNextClaim();
+                Console.WriteLine("The Claim is has been completed.");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
             }
             if (handleClaim == "n")
             {

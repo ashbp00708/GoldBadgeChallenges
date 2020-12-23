@@ -1,0 +1,6 @@
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\03_Badges_ClassLibrary\bin\Debug\03_Badges_ClassLibrary.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\03_Badges_ClassLibrary\bin\Debug\03_Badges_ClassLibrary.pdb
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\03_Badges_ClassLibrary\obj\Debug\03_Badges_ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\03_Badges_ClassLibrary\obj\Debug\03_Badges_ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\03_Badges_ClassLibrary\obj\Debug\03_Badges_ClassLibrary.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\03_Badges_ClassLibrary\obj\Debug\03_Badges_ClassLibrary.pdb

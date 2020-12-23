@@ -12,3 +12,5 @@ C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debu
 C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\02_Claims_UnitTest.csproj.CopyComplete
 C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\KClaims_UnitTest.dll
 C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\obj\Debug\KClaims_UnitTest.pdb
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\KClaims_ClassLibrary.dll
+C:\Users\Ashley Petty\source\repos\GoldBadgeChallenges\KClaims_UnitTest\bin\Debug\KClaims_ClassLibrary.pdb
